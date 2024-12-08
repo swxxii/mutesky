@@ -1,0 +1,11 @@
+/* User Menu Responsive Styles */
+@media (max-width: 768px) {
+    .user-menu {
+        position: static;
+    }
+
+    /* Hide desktop elements */
+    .total-mutes {
+        display: none;
+    }
+}

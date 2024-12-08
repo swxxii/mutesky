@@ -1,0 +1,147 @@
+/* Mobile Navigation Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover span {
+    background: var(--accent);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--spacing-sm);
+        height: 55px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        z-index: 999;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+        flex: 0 0 auto;
+    }
+
+    .brand h1 {
+        font-size: 1.1rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        z-index: 1001;
+    }
+
+    /* Hide desktop elements */
+    .mode-toggle,
+    .keywords-updated,
+    .user-name,
+    .profile-tooltip,
+    .profile-pic,
+    .profile-button {
+        display: none !important;
+    }
+
+    /* Mobile mode switches */
+    .mobile-mode-switches {
+        display: block;
+        border-bottom: 1px solid var(--border);
+    }
+
+    /* Style nav-mute-button for mobile */
+    .nav-mute-button {
+        margin: 0 var(--spacing-sm);
+        padding: 8px;
+        font-size: 0.9rem;
+        min-height: 36px;
+        display: none;
+        width: calc(100% - (var(--spacing-sm) * 2));
+    }
+
+    .nav-mute-button.visible {
+        display: block;
+    }
+
+    /* Menu items styling */
+    .user-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        color: var(--text);
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+    .user-menu-item:hover {
+        background: var(--surface-hover);
+    }
+
+    .user-menu-item svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    /* Ensure dropdown appears below hamburger */
+    .user-menu-dropdown {
+        display: none;
+        position: fixed;
+        top: 55px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background: var(--surface);
+        border-radius: 0;
+        box-shadow: var(--card-shadow);
+        z-index: 1000;
+    }
+
+    .user-menu.active .user-menu-dropdown {
+        display: block;
+    }
+
+    /* Hamburger animation */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* Adjust main content for fixed header */
+    body {
+        padding-top: 55px;
+    }
+}

@@ -1,0 +1,57 @@
+/* Simple Mode - Context Builder */
+.context-builder {
+    height: calc(100vh - 72px - 40px); /* Match advanced mode height (accounting for header and footer) */
+    overflow-y: auto; /* Enable native scrollbar behavior - only appears when needed */
+    overflow-x: hidden;
+    position: fixed;
+    top: 72px; /* Match header height */
+    left: 0;
+    right: 0;
+    background: var(--background);
+    padding: var(--spacing-md) 0; /* Reduced top padding for tighter layout */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .context-builder {
+        top: 56px; /* Reduced header height on mobile */
+        height: calc(100vh - 56px - 32px); /* Adjusted height for mobile */
+        padding: var(--spacing-xs) 0; /* Minimal padding on mobile */
+    }
+}
+
+.context-builder-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    padding-top: 0; /* Remove additional top padding */
+}
+
+.context-selector {
+    margin-bottom: var(--spacing-xl);
+}
+
+.context-card {
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--surface);
+}
+
+.context-card:hover {
+    border-color: var(--primary);
+}
+
+.context-card.selected {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+.context-card h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Hide bottom spacing div since we're using padding */
+.bottom-spacing {
+    display: none;
+}

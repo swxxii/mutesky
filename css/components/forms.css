@@ -1,0 +1,7 @@
+/* Import split form components */
+@import './forms/search.css';
+@import './forms/handle-input.css';
+@import './forms/checkboxes.css';
+@import './forms/category-links.css';
+@import './forms/select.css';
+@import './forms/radio.css';

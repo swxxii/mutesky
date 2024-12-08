@@ -1,0 +1,5 @@
+/* Settings Sidebar Component - Split into modular files */
+@import 'sidebar-layout.css';
+@import 'search-controls.css';
+@import 'settings-tabs.css';
+@import 'appearance-controls.css';

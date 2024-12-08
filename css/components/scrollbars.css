@@ -1,0 +1,89 @@
+/* Light theme scrollbar colors */
+:root {
+    --scrollbar-track: #f0f0f0;
+    --scrollbar-thumb: #a8a8a8;
+    --scrollbar-thumb-hover: #8b98a5;
+}
+
+/* Dark theme scrollbar colors */
+[data-theme="dark"] {
+    --scrollbar-track: #1e2732;
+    --scrollbar-thumb: #38444d;
+    --scrollbar-thumb-hover: #536471;
+}
+
+/* Firefox scrollbar styles */
+* {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    scrollbar-width: auto;
+}
+
+/* Webkit scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Ensure styles apply to specific components */
+.categories-sidebar,
+.categories-grid,
+.keywords-section,
+.context-builder,
+.simple-mode-container,
+.advanced-mode-container {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    scrollbar-width: auto;
+}
+
+.categories-sidebar::-webkit-scrollbar,
+.categories-grid::-webkit-scrollbar,
+.keywords-section::-webkit-scrollbar,
+.context-builder::-webkit-scrollbar,
+.simple-mode-container::-webkit-scrollbar,
+.advanced-mode-container::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.categories-sidebar::-webkit-scrollbar-track,
+.categories-grid::-webkit-scrollbar-track,
+.keywords-section::-webkit-scrollbar-track,
+.context-builder::-webkit-scrollbar-track,
+.simple-mode-container::-webkit-scrollbar-track,
+.advanced-mode-container::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 6px;
+}
+
+.categories-sidebar::-webkit-scrollbar-thumb,
+.categories-grid::-webkit-scrollbar-thumb,
+.keywords-section::-webkit-scrollbar-thumb,
+.context-builder::-webkit-scrollbar-thumb,
+.simple-mode-container::-webkit-scrollbar-thumb,
+.advanced-mode-container::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 6px;
+}
+
+.categories-sidebar::-webkit-scrollbar-thumb:hover,
+.categories-grid::-webkit-scrollbar-thumb:hover,
+.keywords-section::-webkit-scrollbar-thumb:hover,
+.context-builder::-webkit-scrollbar-thumb:hover,
+.simple-mode-container::-webkit-scrollbar-thumb:hover,
+.advanced-mode-container::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}

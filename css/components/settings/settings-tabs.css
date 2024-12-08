@@ -1,0 +1,97 @@
+/* Settings Tabs */
+.settings-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0 16px;
+}
+
+.settings-tab {
+    padding: 16px 24px;
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.settings-tab:hover {
+    color: var(--text);
+}
+
+.settings-tab.active {
+    color: var(--primary);
+}
+
+.settings-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary);
+}
+
+.settings-content {
+    display: none;
+    padding: 24px;
+}
+
+.settings-content.active {
+    display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .settings-tabs {
+        padding: 0;
+        height: 48px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 48px;
+        z-index: 2;
+        background: var(--surface);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: calc(100% - 48px);
+        overflow: hidden;
+    }
+
+    .settings-tab {
+        padding: 0;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        min-width: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Adjust the active indicator */
+    .settings-tab.active::after {
+        height: 3px;
+        border-radius: 0;
+    }
+
+    /* Add touch feedback */
+    .settings-tab:active {
+        opacity: 0.7;
+        transition: opacity 0.1s;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 360px) {
+    .settings-tab {
+        font-size: 13px;
+    }
+}

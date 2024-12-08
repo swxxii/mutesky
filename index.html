@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuteSky — Mute in Bulk on Bluesky</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="MuteSky helps you efficiently manage your Bluesky experience by providing powerful bulk muting capabilities. Filter your feed, manage content, and customize your experience with ease.">
+    <meta name="keywords"
+        content="bluesky, mute, bulk muting, content filter, social media, bluesky app, content management, social media tools">
+    <link rel="canonical" href="https://mutesky.app">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mutesky.app">
+    <meta property="og:title" content="MuteSky — Mute in Bulk on Bluesky">
+    <meta property="og:description"
+        content="MuteSky helps you efficiently manage your Bluesky experience by providing powerful bulk muting capabilities. Filter your feed, manage content, and customize your experience with ease.">
+    <meta property="og:image" content="https://mutesky.app/images/screenshots/dark-simple-mode.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mutesky.app">
+    <meta name="twitter:title" content="MuteSky — Mute in Bulk on Bluesky">
+    <meta name="twitter:description"
+        content="MuteSky helps you efficiently manage your Bluesky experience by providing powerful bulk muting capabilities. Filter your feed, manage content, and customize your experience with ease.">
+    <meta name="twitter:image" content="https://mutesky.app/images/screenshots/dark-simple-mode.png">
+    <style>
+        /* Critical loading and auth styles */
+        body {
+            visibility: hidden;
+        }
+        .js-loaded {
+            visibility: visible;
+        }
+        /* Hide landing by default if coming from auth */
+        body[data-auth-redirect="true"] #landing-page {
+            display: none !important;
+        }
+        body[data-auth-redirect="true"] #app-interface {
+            display: block !important;
+        }
+    </style>
+    <link rel="preload" href="css/base.css" as="style">
+    <link rel="preload" href="css/index.css" as="style">
+    <script>
+        // Check for auth redirect before any rendering
+        if (sessionStorage.getItem('auth_redirect')) {
+            document.documentElement.setAttribute('data-auth-redirect', 'true');
+            sessionStorage.removeItem('auth_redirect');
+        }
+    </script>
+    <script src="js/themeInit.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+</head>
+
+<body>
+    <!-- Loading State -->
+    <div id="loading-state" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landing-page" class="page">
+        <landing-page></landing-page>
+    </div>
+
+    <!-- Main App -->
+    <div id="app-interface" class="page hidden">
+        <top-nav></top-nav>
+
+        <!-- App Introduction -->
+        <app-intro></app-intro>
+
+        <!-- Simple Mode Interface -->
+        <div id="simple-mode" class="interface-mode">
+            <simple-mode></simple-mode>
+        </div>
+
+        <!-- Advanced Mode Interface -->
+        <div id="advanced-mode" class="interface-mode hidden">
+            <advanced-mode></advanced-mode>
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+    <!-- Modals -->
+    <settings-modal></settings-modal>
+    <appearance-modal></appearance-modal>
+    <about-modal></about-modal>
+
+    <!-- Load Web Components before main bundle -->
+    <script type="module">
+        // Import and initialize components
+        import * as Components from './js/components/index.js';
+    </script>
+
+    <!-- Main application bundle -->
+    <script type="module" src="./js/bundle.js"></script>
+</body>
+</html>
