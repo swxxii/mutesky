@@ -1,12 +1,12 @@
 # MuteSky - Bulk manage Bluesky mutes with pre-populated keyword lists
 
-<img align="left" src="images/logo.png" alt="Mutesky Logo" width="245" height="177" style="margin-right: 20px">  MuteSky is a web app that gives you granular control over what appears in your Bluesky feed through curated keyword collections. Working directly with Bluesky's native mute system, it provides an intuitive interface to filter out content you'd rather not see. With over 1,400 pre-populated keywords organized into 20+ smart categories, MuteSky makes content filtering both easy and effective.
+<img align="left" src="images/logo.png" alt="Mutesky Logo" width="245" height="177" style="margin-right: 20px">  MuteSky is a web app that gives you granular control over what appears in your Bluesky feed through curated keyword collections. Working directly with Bluesky's native mute system, it provides an intuitive interface to filter out content you'd rather not see. With over 1,500 pre-populated keywords organized into 20+ smart categories, MuteSky makes content filtering both easy and effective.
 
 &nbsp;
 
 ## 🌟 Key Features
 
-- **Instant Setup**: Pre-populated with 1,400+ keywords, continuously updated by AI to reflect current events
+- **Instant Setup**: Pre-populated with 1,500+ keywords, continuously updated by AI to reflect current events
 - **Smart Categories**: 20+ organized topic groups covering:
   - Political Discord
   - Violence & Security

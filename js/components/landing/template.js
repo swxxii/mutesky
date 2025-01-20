@@ -17,7 +17,7 @@ export const landingPageTemplate = `
                     <div class="landing-feature-card">
                         <span class="feature-icon">✨</span>
                         <div class="feature-text">
-                            <h3>1,400+ Keywords</h3>
+                            <h3>1,500+ Keywords</h3>
                             <p>Continuously updated by AI to reflect current events</p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ export const landingPageTemplate = `
                             <div class="feature-image theme-aware-image" data-light-src="images/screenshots/light-advanced-mode.png" data-dark-src="images/screenshots/dark-advanced-mode.png"></div>
                             <div class="feature-description">
                                 <h3>Advanced Control</h3>
-                                <p>Need more control? Switch to Advanced Mode for direct access to over 1,400 keywords. Fine-tune your filters with individual toggles or bulk actions.</p>
+                                <p>Need more control? Switch to Advanced Mode for direct access to over 1,500 keywords. Fine-tune your filters with individual toggles or bulk actions.</p>
                             </div>
                         </div>
 
