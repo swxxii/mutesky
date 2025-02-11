@@ -31,8 +31,8 @@ const BACKUP_CATEGORY_FILES = [
 const BACKUP_LAST_MODIFIED = 'Dec 1, 2023 9:00 PM';
 
 export async function getLastModifiedDate() {
-    const repoOwner = 'potatoqualitee';
-    const repoName = 'calm-the-chaos';
+    const repoOwner = 'swxxii';
+    const repoName = 'mutesky';
     const filePath = 'keywords/categories';
     const cacheKey = `lastModified_${repoOwner}_${repoName}_${filePath}`;
 
@@ -69,8 +69,8 @@ export async function getLastModifiedDate() {
 }
 
 export async function listCategoryFiles() {
-    const repoOwner = 'potatoqualitee';
-    const repoName = 'calm-the-chaos';
+    const repoOwner = 'swxxii';
+    const repoName = 'mutesky';
     const path = 'keywords/categories';
     const cacheKey = `categoryFiles_${repoOwner}_${repoName}_${path}`;
 

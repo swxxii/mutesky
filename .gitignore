@@ -138,3 +138,4 @@ bundle.js
 *.zip
 /keywords/categories
 repomix-output.txt
+.DS_Store
